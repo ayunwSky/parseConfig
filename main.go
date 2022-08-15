@@ -8,7 +8,7 @@ package main
 
 import (
 	"parseConfig/viperGetItem"
-	viperItemJson "parseConfig/viperJsonItem"
+	"parseConfig/viperItemJson"
 	"parseConfig/viperToml"
 	"parseConfig/viperTomlAndJson"
 )

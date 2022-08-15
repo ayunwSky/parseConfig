@@ -50,7 +50,6 @@ func ParseJsonItem() {
 	}
 
 	vJson.Unmarshal(&itemConfigJson)
-	fmt.Println("start parse item.json")
 	fmt.Println("config all:", itemConfigJson)
 
 	fmt.Println("# ---------- MySQL Info ----------")
