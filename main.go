@@ -8,7 +8,7 @@ package main
 
 import (
 	"parseConfig/viperGetItem"
-	vji "parseConfig/viperJsonItem"
+	viperItemJson "parseConfig/viperJsonItem"
 	"parseConfig/viperToml"
 	"parseConfig/viperTomlAndJson"
 )
@@ -24,5 +24,5 @@ func main() {
 	viperGetItem.ParseItems()
 
 	//fmt.Println("I amd main function...---------------------------")
-	vji.ParseJsonItem()
+	viperItemJson.ParseJsonItem()
 }

@@ -1,7 +1,7 @@
-/**
- * @Author: ayunwSky
- * @Date: 2022/8/14 20:39
- * @Desc:
+/*
+ * @ -*- Author: ayunwSky
+ * @ -*- Date  : 2022/8/14 20:39
+ * @ -*- Desc  :
  */
 
 package viperToml
@@ -32,8 +32,9 @@ type Config struct {
 	Title string
 }
 
+// ParseToml 解析 toml 格式配置文件
 func ParseToml() {
-	fmt.Println("# ---------- viperToml start ----------")
+	//fmt.Println("# ---------- viperToml start ----------")
 	// 定义一个 Config 结构体类型的变量 config
 	var config Config
 
@@ -51,6 +52,6 @@ func ParseToml() {
 	fmt.Printf("Redis Host: %v\n", config.Redis.Host)
 	fmt.Printf("title: %v\n", config.Title)
 
-	fmt.Println("# ---------- viperToml end ----------")
+	//fmt.Println("# ---------- viperToml end ----------")
 	fmt.Println()
 }

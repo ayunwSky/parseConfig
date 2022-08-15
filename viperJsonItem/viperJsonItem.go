@@ -1,8 +1,13 @@
-package viperjsonitem
+/*
+ * @ -*- Author: ayunwSky
+ * @ -*- Date  : 2022/8/15 19:53
+ * @ -*- Desc  :
+ */
+
+package viperItemJson
 
 import (
 	"fmt"
-
 	"github.com/spf13/viper"
 )
 
@@ -23,13 +28,14 @@ type Metrics struct {
 }
 
 type Config struct {
-	MySQL   MySQLConfig
+	MySQL MySQLConfig
 	Metrics Metrics
-	Redis   string
+	Redis string
 }
 
+// ParseJsonItem 从 item.json 文件解析数据
 func ParseJsonItem() {
-	fmt.Println("# ---------- parse item.json start ----------")
+	//fmt.Println("# ---------- parse item.json start ----------")
 
 	var itemConfigJson Config
 
@@ -44,10 +50,9 @@ func ParseJsonItem() {
 	}
 
 	vJson.Unmarshal(&itemConfigJson)
-	// fmt.Println("start parse item.json")
+	fmt.Println("start parse item.json")
 	fmt.Println("config all:", itemConfigJson)
 
-	fmt.Println()
 	fmt.Println("# ---------- MySQL Info ----------")
 	fmt.Println("MySQL:", itemConfigJson.MySQL)
 	fmt.Println("MySQL.Port:", itemConfigJson.MySQL.Port)
@@ -65,6 +70,4 @@ func ParseJsonItem() {
 	fmt.Println()
 	fmt.Println("# ---------- Redis Info ----------")
 	fmt.Println("Redis:", itemConfigJson.Redis)
-
-	fmt.Println()
 }

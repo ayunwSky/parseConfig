@@ -1,7 +1,7 @@
-/**
- * @Author: ayunwSky
- * @Date: 2022/8/14 21:32
- * @Desc:
+/*
+ * @ -*- Author: ayunwSky
+ * @ -*- Date: 2022/8/14 21:32
+ * @ -*- Desc:
  */
 
 package viperGetItem
@@ -11,9 +11,9 @@ import (
 	"github.com/spf13/viper"
 )
 
-// 读取配置项的值
+// ParseItems 读取配置项的值
 func ParseItems() {
-	fmt.Println("# ---------- viperGetItem start ----------")
+	//fmt.Println("# ---------- viperGetItem start ----------")
 
 	// 设置要解析的配置文件名
 	viper.SetConfigName("item")
@@ -61,6 +61,5 @@ func ParseItems() {
 	fmt.Println("mysqlMap:", mysqlMap)
 	fmt.Println("mysqlMapMetrics:", mysqlMap["metrics"])
 
-	fmt.Println("# ---------- viperGetItem end ----------")
 	fmt.Println()
 }
