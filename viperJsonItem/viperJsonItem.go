@@ -24,7 +24,7 @@ type Metrics struct {
 
 type Config struct {
 	MySQL   MySQLConfig
-	Metrcis Metrics
+	Metrics Metrics
 	Redis   string
 }
 
@@ -47,6 +47,7 @@ func ParseJsonItem() {
 	// fmt.Println("start parse item.json")
 	fmt.Println("config all:", itemConfigJson)
 
+	fmt.Println()
 	fmt.Println("# ---------- MySQL Info ----------")
 	fmt.Println("MySQL:", itemConfigJson.MySQL)
 	fmt.Println("MySQL.Port:", itemConfigJson.MySQL.Port)
@@ -55,14 +56,15 @@ func ParseJsonItem() {
 	fmt.Println("MySQL.Password:", itemConfigJson.MySQL.Password)
 	fmt.Println("MySQL.Ports:", itemConfigJson.MySQL.Ports)
 
-	fmt.Println("# ---------- Metrcis Info ----------")
-	fmt.Println("Metrcis:", itemConfigJson.Metrcis)
-	fmt.Println("Metrcis.Host:", itemConfigJson.Metrcis.Host)
-	fmt.Println("Metrcis.Port:", itemConfigJson.Metrcis.Port)
+	fmt.Println()
+	fmt.Println("# ---------- Metrics Info ----------")
+	fmt.Println("Metrics:", itemConfigJson.Metrics)
+	fmt.Println("Metrics.Host:", itemConfigJson.Metrics.Host)
+	fmt.Println("Metrics.Port:", itemConfigJson.Metrics.Port)
 
+	fmt.Println()
 	fmt.Println("# ---------- Redis Info ----------")
 	fmt.Println("Redis:", itemConfigJson.Redis)
 
-	fmt.Println("# ---------- parse item.json end ----------")
 	fmt.Println()
 }
