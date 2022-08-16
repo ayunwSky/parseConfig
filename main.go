@@ -8,20 +8,20 @@ package main
 
 import (
 	"parseConfig/viperGetItem"
-	"parseConfig/viperItemJson"
-	"parseConfig/viperToml"
-	"parseConfig/viperTomlAndJson"
+	// "parseConfig/viperItemJson"
+	// "parseConfig/viperToml"
+	// "parseConfig/viperTomlAndJson"
 )
 
 func main() {
 	//fmt.Println("I amd main function...---------------------------")
-	viperToml.ParseToml()
+	// viperToml.ParseToml()
 
 	//fmt.Println("I amd main function...---------------------------")
-	viperTomlAndJson.ParseTomlAndJson()
+	// viperTomlAndJson.ParseTomlAndJson()
 
 	//fmt.Println("I amd main function...---------------------------")
-	viperItemJson.ParseJsonItem()
+	// viperItemJson.ParseJsonItem()
 	
 	//fmt.Println("I amd main function...---------------------------")
 	viperGetItem.ParseItems()

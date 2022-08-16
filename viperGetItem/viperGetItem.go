@@ -8,8 +8,24 @@ package viperGetItem
 
 import (
 	"fmt"
+	"encoding/json"
 	"github.com/spf13/viper"
 )
+
+// typeAssert 断言
+// func typeAssert(a interface{}) interface{}{
+// 	fmt.Printf("%T\n",a)
+
+// 	switch v := a.(type){
+// 	case string:
+// 		return v
+// 	case int:
+// 		return v
+// 	default:
+// 		fmt.Printf("unsupport type!")
+// 	}
+// 	return
+// }
 
 // ParseItems 读取配置项的值
 func ParseItems() {
@@ -36,8 +52,6 @@ func ParseItems() {
 	mysqlMetricsPort := viper.GetInt("mysql.metrics.port")
 	redisConf := viper.Get("redis")
 
-	mysqlStringMap := viper.GetStringMapString("mysql")
-
 	if viper.IsSet("mysql.host") {
 		fmt.Println("[IsSet()] mysql.host is set")
 	} else {
@@ -49,17 +63,39 @@ func ParseItems() {
 	fmt.Println("mysqlMetricsPort:", mysqlMetricsPort)
 	fmt.Println("redisConf:", redisConf)
 
-	fmt.Println("mysqlStringMap:", mysqlStringMap)
+	fmt.Println()
+	fmt.Println("---------- mysqlStringMap ----------")
+	mysqlStringMap := viper.GetStringMap("mysql")
 
+	fmt.Println("mysqlStringMap:", mysqlStringMap)
 	fmt.Println("mysqlStringMapUsername:", mysqlStringMap["username"])
+
+	// v := typeAssert(mysqlStringMap["metrics.host"])
+	// fmt.Println(v)
+
+	
+	// jsonData :=[]byte(mysqlStringMap)
+
+	// var v interface{}
+	// json.Unmarshal(jsonData, &v)
+	// data := v.(map[string]interface{})
+
+	// for k, v := range data{
+	// 	switch v := v.(type) {
+	// 	case string:
+	// 		fmt.Println(k,v , "(string)")
+	// 	case float64:
+	// 		fmt.Println(k,v , "(float64)")
+	// 	case []interface{}:
+	// 		fmt.Println(k,"(array)")
+	// 		for i, u := range v{
+	// 			fmt.Println("  ",i,u)
+	// 		}
+	// 	default:
+	// 		fmt.Println(k,v,"(unknow)")
+	// 	}
+	// }
+	
 	fmt.Println("mysqlStringMapHost:", mysqlStringMap["metrics.host"])
 	fmt.Println("mysqlStringMapMetricsPort:", mysqlStringMap["metrics.port"])
-
-	fmt.Println()
-
-	mysqlMap := viper.GetStringMap("mysql")
-	fmt.Println("mysqlMap:", mysqlMap)
-	fmt.Println("mysqlMapMetrics:", mysqlMap["metrics"])
-
-	fmt.Println()
 }
