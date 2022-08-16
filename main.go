@@ -21,8 +21,8 @@ func main() {
 	viperTomlAndJson.ParseTomlAndJson()
 
 	//fmt.Println("I amd main function...---------------------------")
-	viperGetItem.ParseItems()
-
-	//fmt.Println("I amd main function...---------------------------")
 	viperItemJson.ParseJsonItem()
+	
+	//fmt.Println("I amd main function...---------------------------")
+	viperGetItem.ParseItems()
 }
