@@ -7,7 +7,8 @@
 package main
 
 import (
-	"parseConfig/viperGetItem"
+	// "parseConfig/viperGetItem"
+	"parseConfig/viperYamlConf"
 	// "parseConfig/viperItemJson"
 	// "parseConfig/viperToml"
 	// "parseConfig/viperTomlAndJson"
@@ -24,5 +25,7 @@ func main() {
 	// viperItemJson.ParseJsonItem()
 	
 	//fmt.Println("I amd main function...---------------------------")
-	viperGetItem.ParseItems()
+	// viperGetItem.ParseItems()
+
+	viperYamlConf.ParseYamlConf()
 }

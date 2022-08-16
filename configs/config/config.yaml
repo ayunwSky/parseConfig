@@ -1,0 +1,18 @@
+TimeStamp: "2022-08-16 13:57:19"
+Username: "ayunw"
+BasicInfo:
+   RealName: "ayunwSky"
+   Age: "24"
+   Language:
+   - "Golang"
+   - "Python"
+   - "Shell"
+   Married: false
+
+Hobby:
+  Sport:
+  - "Swimm"
+  - "Driving"
+  Music:
+  - "Unstoppable"
+  LuckyNumber: 88
