@@ -4,6 +4,10 @@
 ```console
 https://github.com/spf13/viper
 ```
+#### 安装 viper
+```
+go get github.com/spf13/viper
+```
 
 #### 滴滴开源的 json 解析包
 ```console

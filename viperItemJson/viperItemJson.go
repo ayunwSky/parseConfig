@@ -40,12 +40,19 @@ func ParseJsonItem() {
 	var itemConfigJson Config
 
 	vJson := viper.New()
+	// 配置文件的文件名，没有扩展名，如 .yaml, .toml 这样的扩展名
 	vJson.SetConfigName("item")
+	// 设置扩展名。在这里设置文件的扩展名。另外，如果配置文件的名称没有扩展名，则需要配置这个选项
 	vJson.SetConfigType("json")
+	// 查找配置文件所在路径
 	vJson.AddConfigPath("./configs")
+	// 多次调用AddConfigPath，可以添加多个搜索路径
+	// viper.AddConfigPath("/etc/appname/")
+	// 还可以在工作目录中搜索配置文件
+	// viper.AddConfigPath(".")
 
 	if err := vJson.ReadInConfig(); err != nil {
-		fmt.Printf("read in item.json file failed, err: %v\n", err)
+		fmt.Printf("read in item.json config file failed, err: %v\n", err)
 		return
 	}
 
